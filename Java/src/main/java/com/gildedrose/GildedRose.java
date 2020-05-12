@@ -5,8 +5,6 @@ import com.gildedrose.items.BasicItem;
 import java.util.Arrays;
 
 class GildedRose {
-    private final static int minQualityValue = 0;
-    private final static int maxQualityValue = 50;
 
     BasicItem[] items;
 
@@ -18,14 +16,5 @@ class GildedRose {
         for (BasicItem item: items) {
             item.updateQuality();
         }
-    }
-
-    private boolean isAboveMinimumQualityValue(Item item) {
-        return item.quality > minQualityValue;
-    }
-
-    private boolean isUnderHighestQualityValue(Item item) {
-        return item.quality < maxQualityValue;
-
     }
 }
