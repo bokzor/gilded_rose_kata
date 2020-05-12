@@ -1,7 +1,5 @@
 package com.gildedrose.items;
 
-import com.gildedrose.Item;
-
 public class AgedBrie extends BasicItem {
     public static final String name = "Aged Brie";
 
@@ -9,7 +7,16 @@ public class AgedBrie extends BasicItem {
         super(name, sellIn, quality);
     }
 
-    public void theDayHasPassed() {
-
+    @Override
+    public void updateQuality() {
+        if(sellIn == 0) {
+            this.increaseQuality();
+            this.increaseQuality();
+        } else {
+            this.increaseQuality();
+        }
+        this.decreaseSellIn();
     }
+
 }
+
