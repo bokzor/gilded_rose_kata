@@ -8,7 +8,7 @@ public class BasicItem extends Item {
     private final static int maxQualityValue = 50;
 
     public BasicItem(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+        super(name, Math.max(sellIn, 0), quality);
     }
 
     protected boolean isAboveMinimumQualityValue() {

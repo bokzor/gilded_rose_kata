@@ -1,9 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.items.AgedBrie;
-import com.gildedrose.items.BackStagePass;
-import com.gildedrose.items.BasicItem;
-import com.gildedrose.items.Sulfuras;
+import com.gildedrose.items.*;
 
 public class CustomItemFactory {
     public static BasicItem createItem(Item item) {
@@ -17,6 +14,10 @@ public class CustomItemFactory {
 
         if (item.name.equals(Sulfuras.name)) {
             return new Sulfuras(item.sellIn);
+        }
+
+        if (item.name.equals(Conjured.name)) {
+            return new Conjured(item.sellIn, item.quality);
         }
 
         return new BasicItem(item.name, item.sellIn, item.quality);
